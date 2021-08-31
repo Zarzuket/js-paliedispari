@@ -37,13 +37,27 @@ var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5 "))
 
 function randomNumber(){
     var numCPU = Math.floor((Math.random() * 5) + 1);
-    return console.log(numCPU);
+    return numCPU;
 }
 
-console.log(numeroUtente);
-randomNumber();
+var numeroCPU = randomNumber();
 
-// alert("questa è la scelta del cpu " + randomNumber())
 
-var resultUtenteVsCPU = numeroUtente + randomNumber();
-console.log(resultUtenteVsCPU);
+var numeroCPU;
+alert("questa è la scelta del cpu " + numeroCPU)
+
+
+var resultUtenteVsCPU = numeroUtente + numeroCPU;
+alert("la somma del tuo numero + il numero del cpu è: " + resultUtenteVsCPU);
+
+
+function isEven(){
+    if(resultUtenteVsCPU % 2 == 0 && sceltaUtente == "pari" ){
+        alert("il numero è pari! hai vinto!")
+    } else {
+        alert("il numero è dispari, hai perso riprova")
+    }
+
+}
+
+isEven(resultUtenteVsCPU);
